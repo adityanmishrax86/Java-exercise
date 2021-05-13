@@ -10,13 +10,18 @@ public class Welcome {
     public static void main(String[] args) {
         System.out.println("This is the base class where all the exercises will pass on.");
 
-        Gen<Integer> obj = new Gen<Integer>(20);
+        Integer inums[] = {3,6,2,5,2,5};
+        Character chs[] = {'b','c','d','e','x'};
 
-        System.out.println(obj.getOb());
-        obj.showType();
-        Integer[] j = {1,2,3,4,5,6};
-        GenWithBound<Integer> oj = new GenWithBound<Integer>(j);
-        System.out.println(oj.average());
+        AneClass<Integer> x = new AneClass<>(inums);
+        AneClass<Character> y = new AneClass<>(chs);
+
+        System.out.println(x.min());
+        System.out.println(x.max());
+
+        System.out.println(y.min());
+        System.out.println(y.max());
+
     }
 
 }
